@@ -105,5 +105,29 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int vbusc = 0;
+	int qtbusc = 0;
+	int lvalor = 0;
+
+	cout << "Digite o valor que deseja: ";
+	cin >> vbusc;
+
+	for (int n = 0; n < nElementos; n++) {
+		if (lista[n] == vbusc)
+		{
+			qtbusc++;
+
+			lvalor = lista[n];
+		}
+	}
+
+	if (qtbusc >= 1) {
+		cout << "foi encontrado nas posiçoes: " << lvalor << endl << "foi encontrado " << qtbusc << " vezes" << endl;
+	}
+
+	else
+	{
+		cout << "Valor não encontrado" << endl;
+	}
 
 }
